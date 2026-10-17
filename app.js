@@ -1,7 +1,8 @@
 function sendPromptOnAction() {
+    //alert("Hi!")
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-    myHeaders.append("X-goog-api-key", "Your-API-Key-Here");
+    myHeaders.append("X-goog-api-key", "Your API Key Here");
 
     let userInput = document.getElementById("txtUserInput").value;
 
@@ -27,7 +28,7 @@ function sendPromptOnAction() {
     fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent", requestOptions)
         .then((response) => response.json())
         .then((result) => {
-            document.getElementById("lblResponse").innerHTML = result.candidates[0].content.parts[0].text;
+            document.getElementById("lblResponce").innerHTML = markdown.default(result.candidates[0].content.parts[0].text);
         })
         .catch((error) => console.error(error));
 }
