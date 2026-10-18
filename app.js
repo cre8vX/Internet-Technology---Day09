@@ -40,7 +40,44 @@ console.log(numSum);
 
 //------------------------------
 
-import { getText } from "./sum.js";
+// import { getText } from "./sum.js";
 
-let text = getText();
-console.log(text);
+// let text = getText();
+// console.log(text);
+
+//------------------------------
+// import { subtract } from "./sum.js";
+// let numSubtract = subtract(10, 5);
+// console.log(numSubtract);
+
+// import { multiply } from "./sum.js";
+// let numMultiply = multiply(10, 5);
+// console.log(numMultiply);
+
+// import { divide } from "./sum.js";
+// let numDivide = divide(10, 5);
+// console.log(numDivide);
+
+// const name = "Elon Musk";
+// console.log(name);
+
+//------------------------------
+import { subtract, multiply, divide, name } from "./sum.js";
+
+let numSubtract = subtract(10, 5);
+console.log(numSubtract);
+
+let numMultiply = multiply(10, 5);
+console.log(numMultiply);
+
+
+let numDivide = divide(10, 5);
+console.log(numDivide);
+
+console.log(name);
+
+//------------------------------
+import Student from "./Student.js";
+
+let student1 = new Student("Saman Kumara", 20, "A");
+console.log(student1.name, student1.age, student1.grade);
